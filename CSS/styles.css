@@ -254,6 +254,12 @@ img {
   background-color: var(--primary-white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.button-close:hover,
+.button-close:focus {
+  fill: var(--accent-color);
 }
 .form-group {
   display: flex;
