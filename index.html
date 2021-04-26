@@ -113,21 +113,25 @@
                     name="comment"
                     rows="5"
                     placeholder="Введите текст"
-                    class="form-input"
+                    class="form-input-comment"
                     id="user-comment"
                   ></textarea>
                 </div>
-                <input
-                  type="checkbox"
-                  name="license"
-                  value="license-agreement"
-                  class="checkbox-input"
-                  id="license-agreement"
-                />
-                <label for="license-agreement" class="license-label"
-                  >Соглашаюсь с рассылкой и принимаю Условия договора
-                </label>
-                <button type="submit" class="submit-button">Отправить</button>
+                <div class="license-item">
+                  <input
+                    type="checkbox"
+                    name="license-agreement"
+                    value="license-agreement"
+                    class="license-input"
+                    id="license-agreement"
+                  />
+                  <label for="license-agreement" class="license-label"
+                    >Соглашаюсь с рассылкой и принимаю Условия договора
+                  </label>
+                </div>
+                <div class="button-thumb">
+                  <button type="submit" class="submit-button">Отправить</button>
+                </div>
               </div>
             </form>
             <button class="button-close" data-modal-close>
@@ -548,16 +552,19 @@
           </div>
           <div class="subscribe">
             <b class="come-in">Подпишитесь на рассылку</b>
-            <div class="form-item">
-              <label for="footer-email" class="form-label">Почта</label>
-              <input
-                type="email"
-                name="email"
-                class="form-input"
-                id="footer-email"
-              />
+            <div class="footer-form">
+              <div class="footer-form-item">
+                <label for="footer-email" class="footer-form-label"></label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                  class="footer-form-input"
+                  id="footer-email"
+                />
+              </div>
+              <button type="submit" class="submit-button">Подписаться</button>
             </div>
-            <button type="submit" class="submit-button">Отправить</button>
           </div>
         </div>
       </div>
