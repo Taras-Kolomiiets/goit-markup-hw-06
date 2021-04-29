@@ -80,14 +80,13 @@
                 </p>
                 <div class="form-item">
                   <label for="user-name" class="form-label">Имя </label>
-
                   <input
                     type="text"
                     name="name"
                     class="form-input"
                     id="user-name"
                   />
-                  <svg class="icon-person" width="18px" height="18px">
+                  <svg class="icon-form" width="18px" height="18px">
                     <use href="./images/icons.svg#icon-person"></use>
                   </svg>
                 </div>
@@ -99,7 +98,7 @@
                     class="form-input"
                     id="user-tel"
                   />
-                  <svg class="icon-person" width="18px" height="18px">
+                  <svg class="icon-form" width="18px" height="18px">
                     <use href="./images/icons.svg#icon-phone"></use>
                   </svg>
                 </div>
@@ -111,7 +110,7 @@
                     class="form-input"
                     id="user-email"
                   />
-                  <svg class="icon-person" width="18px" height="18px">
+                  <svg class="icon-form" width="18px" height="18px">
                     <use href="./images/icons.svg#icon-email"></use>
                   </svg>
                 </div>
@@ -128,18 +127,20 @@
                   ></textarea>
                 </div>
                 <div class="license-item">
-                  <input
-                    type="checkbox"
-                    name="license-agreement"
-                    value="license-agreement"
-                    class="license-input"
-                    id="license-agreement"
-                  />
-                  <svg class="icon-vector" width="16px" height="15px">
+                  <label for="license-agreement" class="license-label">
+                    <input
+                      type="checkbox"
+                      name="license-agreement"
+                      value="license-agreement"
+                      class="license-input"
+                      id="license-agreement"
+                    />
+                    <span class="icon-check"></span>
+                    <!-- <svg class="icon-vector" width="16px" height="15px">
                     <use href="./images/icons.svg#icon-vector"></use>
-                  </svg>
-                  <label for="license-agreement" class="license-label"
-                    >Соглашаюсь с рассылкой и принимаю Условия договора
+                  </svg> -->
+                    Соглашаюсь с рассылкой и принимаю
+                    <a href="#" class="license-contract">Условия договора</a>
                   </label>
                 </div>
                 <div class="button-thumb">

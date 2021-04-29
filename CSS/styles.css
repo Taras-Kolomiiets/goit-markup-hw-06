@@ -245,8 +245,8 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-close {
   position: absolute;
@@ -319,18 +319,20 @@ img {
 .form-input:focus {
   border-color: var(--accent-color);
   cursor: pointer;
+  outline: none;
 }
-.form-input:hover + .icon-person,
-.form-input:focus + .icon-person {
+.form-input:hover + .icon-form,
+.form-input:focus + .icon-form {
   fill: var(--accent-color);
 }
-.icon-person {
+.icon-form {
   position: absolute;
   top: 50%;
   left: 12px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input-comment {
+  height: 120px;
   padding: 12px 16px;
   margin-bottom: 20px;
 
@@ -343,6 +345,7 @@ img {
 .form-input-comment:focus {
   border-color: var(--accent-color);
   cursor: pointer;
+  outline: none;
 }
 .form-input-comment::placeholder {
   font-family: Roboto;
@@ -361,21 +364,52 @@ img {
   margin-bottom: 30px;
 }
 .license-input {
-  margin-right: 7px;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  /* position: absolute;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  appearance: none; */
 }
-/* .license-item input[type='checkbox'] {
-  width: 20px;
-  height: 20px;
-} */
+
+.icon-check {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 7px;
+
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+
+  transition: transform 250ms linear;
+}
+.license-input:checked + .icon-check {
+  transform: scale(1.2);
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-image: url('../images/icon-check.svg');
+  background-size: contain;
+  background-origin: border-box;
+}
 .license-label {
+  display: flex;
+  align-items: center;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
 
   color: var(--additional-text-color);
+
+  transition: transform 250ms linear;
+}
+.license-contract {
+  color: var(--accent-color);
 }
 .button-thumb {
   text-align: center;
